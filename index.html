@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function makeid() {
+            const length = 7;
+            let result = '';
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            const charactersLength = characters.length;
+            let counter = 0;
+            while (counter < length) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                counter += 1;
+            }
+            return result;
+        }
+
+        function load() {
+            for (let i = 0; i < 33; i++)
+                window.open('https://www.bing.com/search?pglt=129&q=' + makeid(), '_blank');
+        }
+    </script>
+</head>
+
+<body onload="load()">
+</body>
+  <h1>Please allow pop up to open multiple Pages</h1>
+</html>
